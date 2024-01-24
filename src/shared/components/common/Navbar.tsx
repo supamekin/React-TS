@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { logo_profile } from "../../../assets/images"
+import { logo_profile_W } from "../../../assets/images"
 const Navbar = () => {
   const navigate = useNavigate();
   const routeTo = (path) => {
@@ -7,12 +7,20 @@ const Navbar = () => {
   };
 
   return (
-    <header className=" bg-gray-700 p-2 flex ">
-      <div className=" " style={{ backgroundImage: `url(${logo_profile})`}}>ert</div>
-      <nav className=" flex justify-end">
-        <div onClick={() => routeTo("/userlogin")} className=" w-[70px] bg-white text-center rounded m-2 p-1 font-bold cursor-pointer">Sign in</div>
-        <div onClick={() => routeTo("/register")} className=" w-[70px] bg-blue-500 text-center rounded m-2 p-1 text-white font-bold cursor-pointer" >Sign up</div>
+    <header className=" bg-[#333] p-2 ">
+      <div className=" flex items-center justify-between max-w-[1140px] m-auto ">
+      <div className="flex items-center w-[180px] h-[30px] " >
+        <img src={logo_profile_W} className=""/>
+      </div>
+      <nav className=" flex items-center font-bold">
+        <div onClick={() => routeTo("/register")} className=" mr-7 text-base text-white cursor-pointer" >หน้าแรก</div>
+        <div onClick={() => routeTo("/register")} className=" mr-7 text-base text-white cursor-pointer" >ผลงาน</div>
+        <div onClick={() => routeTo("/register")} className=" mr-7 text-base text-white cursor-pointer" >เกี่ยวกับเรา</div>
+        <div onClick={() => routeTo("/register")} className=" mr-7 text-base text-white cursor-pointer" >บทความ</div>
+        <div onClick={() => routeTo("/userlogin")} className=" w-[70px] bg-white text-center rounded m-2 p-1 cursor-pointer">Sign in</div>
+        <div onClick={() => routeTo("/register")} className=" w-[70px] bg-blue-500 text-center rounded m-2 p-1 text-white cursor-pointer" >Sign up</div>
       </nav>
+      </div>
     </header>
   );
 };
